@@ -5,6 +5,7 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./sections/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -12,6 +13,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+    },
+    screens: {
+      sm: "375px",
+      md: "768px",
+      lg: "1200px",
+    },
+    fontFamily: {
+      inter: ["Inter", "sans-serif"],
+      dm: ["Nunito", "serif"],
     },
   },
   plugins: [],
