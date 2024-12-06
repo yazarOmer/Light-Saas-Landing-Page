@@ -1,59 +1,8 @@
 import { Button } from "@/components/button";
 import { twMerge } from "tailwind-merge";
-import { IoCheckmarkOutline } from "react-icons/io5";
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { Badge } from "@/components/badge";
-
-const pricings = [
-  {
-    name: "Free",
-    price: 0,
-    isPopular: false,
-    buttonType: "primary",
-    buttonLabel: "Get for free",
-    features: [
-      "Up to 5 project members",
-      "Unlimited tasks and projects",
-      "2GB storage",
-      "Integrations",
-      "Basic support",
-    ],
-  },
-  {
-    name: "Pro",
-    price: 9,
-    isPopular: true,
-    buttonType: "secondary",
-    buttonLabel: "Sign up now",
-    features: [
-      "Up to 50 project members",
-      "Unlimited tasks and projects",
-      "50GB storage",
-      "Integrations",
-      "Priority support",
-      "Advanced support",
-      "Export support",
-    ],
-  },
-  {
-    name: "Business",
-    price: 19,
-    isPopular: false,
-    buttonType: "primary",
-    buttonLabel: "Sign up now",
-    features: [
-      "Up to 5 project members",
-      "Unlimited tasks and projects",
-      "200GB storage",
-      "Dedicated account manager",
-      "Custom fields",
-      "Advanced analytics",
-      "Export capabilities",
-      "API access",
-      "Advanced security features",
-    ],
-  },
-];
+import { pricings } from "@/constants";
 
 export const Pricing = () => {
   return (
@@ -71,6 +20,7 @@ export const Pricing = () => {
         <div className="mt-10 lg:max-w-[1040px] lg:mx-auto flex flex-col lg:flex-row lg:items-end gap-6">
           {pricings.map((pricing) => (
             <div
+              key={pricing.name}
               className={twMerge(
                 "max-w-[320px] mx-auto border border-[#F1F1F1] bg-white w-full p-10 rounded-3xl drop-shadow-[0_7px_14px_rgb(234,234,234)]",
                 pricing.isPopular && "bg-black"
@@ -115,7 +65,7 @@ export const Pricing = () => {
               </Button>
               <div className="mt-[32px] flex flex-col gap-6">
                 {pricing.features.map((feature) => (
-                  <div className="flex gap-4 items-center">
+                  <div key={feature} className="flex gap-4 items-center">
                     <IoCheckmarkSharp
                       className={twMerge(
                         "text-black",
