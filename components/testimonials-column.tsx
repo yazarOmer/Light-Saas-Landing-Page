@@ -18,7 +18,7 @@ export const TestimonialsColumn = ({
   return (
     <div
       className={twMerge(
-        "items-center w-[365px] flex flex-col gap-6 pt-10 [mask-image:linear-gradient(to_bottom,transparent,black_35%,black_75%,transparent)]",
+        "items-center w-[365px] flex flex-col gap-6 pt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]",
         className
       )}
     >

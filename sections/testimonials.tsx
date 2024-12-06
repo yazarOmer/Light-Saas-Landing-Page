@@ -9,7 +9,7 @@ export const Testimonials = () => {
 
   return (
     <section className="bg-white">
-      <div className="flex flex-col items-center px-5">
+      <div className="flex flex-col items-center px-5 max-w-[600px] mx-auto">
         <Badge>Testimonials</Badge>
         <h1 className="font-dm font-bold text-[30px] md:text-[54px] bg-gradient-to-b from-black to-[#001E7F] text-transparent bg-clip-text text-center mt-5">
           What our users say

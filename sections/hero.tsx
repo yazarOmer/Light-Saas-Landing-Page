@@ -22,7 +22,7 @@ export const Hero = () => {
           </p>
           <div className="flex items-center mt-[30px] gap-1">
             <Button primary>Get for free</Button>
-            <Button>
+            <Button className="bg-transparent">
               Learn More <FaArrowRight />
             </Button>
           </div>
