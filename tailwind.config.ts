@@ -21,7 +21,7 @@ export default {
     },
     fontFamily: {
       inter: ["Inter", "sans-serif"],
-      dm: ["Nunito", "serif"],
+      dm: ["DM Sans", "serif"],
     },
   },
   plugins: [],
