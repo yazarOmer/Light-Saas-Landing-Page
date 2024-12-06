@@ -12,27 +12,42 @@ export const Navbar = () => {
           <nav className="hidden md:flex">
             <ul className="flex items-center gap-6">
               <li>
-                <a href="#" className="font-dm text-black/60 leading-6">
+                <a
+                  href="#"
+                  className="font-dm text-black/60 hover:text-black/30 leading-6"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="font-dm text-black/60 leading-6">
+                <a
+                  href="#"
+                  className="font-dm text-black/60 hover:text-black/30 leading-6"
+                >
                   Features
                 </a>
               </li>
               <li>
-                <a href="#" className="font-dm text-black/60 leading-6">
+                <a
+                  href="#"
+                  className="font-dm text-black/60 hover:text-black/30 leading-6"
+                >
                   Customers
                 </a>
               </li>
               <li>
-                <a href="#" className="font-dm text-black/60 leading-6">
+                <a
+                  href="#"
+                  className="font-dm text-black/60 hover:text-black/30 leading-6"
+                >
                   Updates
                 </a>
               </li>
               <li>
-                <a href="#" className="font-dm text-black/60 leading-6">
+                <a
+                  href="#"
+                  className="font-dm text-black/60 hover:text-black/30 leading-6"
+                >
                   Help
                 </a>
               </li>

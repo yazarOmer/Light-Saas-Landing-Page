@@ -10,10 +10,10 @@ export const Product = () => {
       <div className="px-5 lg:px-20">
         <div className="max-w-[335px] md:max-w-[540px] w-full mx-auto">
           <Badge>Boost your productivity</Badge>
-          <h1 className="font-dm font-bold text-[30px] md:text-[54px] bg-gradient-to-b from-black to-[#001E7F] text-transparent bg-clip-text mt-5 leading-9 md:leading-[60px]">
+          <h1 className="section-title">
             A more effective way to track progress
           </h1>
-          <p className="font-dm text-[22px] text-[#010D3E] mt-5">
+          <p className="section-description">
             Celebrate the joy of accomplishment with an app designed to track
             your progress and motivate your efforts.
           </p>
