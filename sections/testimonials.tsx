@@ -19,7 +19,7 @@ export const Testimonials = () => {
           essential tool for users around the world.
         </p>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] mt-10 max-h-[738px] overflow-hidden">
         <TestimonialsColumn testimonials={firstColumn} />
         <TestimonialsColumn
           testimonials={secondColumn}

@@ -1,3 +1,4 @@
+"use client";
 import { Badge } from "@/components/badge";
 import { Button } from "@/components/button";
 
@@ -5,11 +6,23 @@ import { FaArrowRight } from "react-icons/fa6";
 import cogImage from "@/assets/cog.png";
 import cylinderImage from "@/assets/cylinder.png";
 import noodleImage from "@/assets/noodle.png";
-import Image from "next/image";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 
 export const Hero = () => {
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
-    <section className="pt-8 pb-20 md:pt-5 md:pb-10 px-5 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip">
+    <section
+      ref={sectionRef}
+      className="pt-8 pb-20 md:pt-5 md:pb-10 px-5 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip"
+    >
       <div className="md:flex items-center max-w-[1200px] mx-auto">
         <div className="md:w-[478px]">
           <Badge>Version 2.0 is here</Badge>
@@ -28,23 +41,29 @@ export const Hero = () => {
           </div>
         </div>
         <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
-          <Image
-            src={cogImage}
+          <motion.img
+            src={cogImage.src}
             alt="cog"
             className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-10"
+            animate={{ translateY: [-30, 30] }}
+            transition={{ repeat: Infinity, repeatType: "mirror", duration: 3 }}
           />
-          <Image
-            src={cylinderImage}
+          <motion.img
+            src={cylinderImage.src}
             alt="cylinder"
             width={220}
             height={220}
+            style={{
+              translateY,
+            }}
             className="-top-8 -left-20 hidden md:block absolute"
           />
-          <Image
-            src={noodleImage}
+          <motion.img
+            src={noodleImage.src}
             alt="noodle"
             width={220}
             height={220}
+            style={{ translateY }}
             className="hidden lg:block absolute top-[524px] left-[500px] rotate-[30deg]"
           />
         </div>
